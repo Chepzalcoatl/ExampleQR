@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nCg-kf-d2R">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--QR-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExampleQR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto del QR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZm-bv-AYM">
+                                <rect key="frame" x="16" y="80" width="97" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="8nH-c6-dFe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Texto para genera QR" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wZa-sD-Nly">
+                                <rect key="frame" x="16" y="108" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cK3-ux-ePe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8a-1v-cxF">
+                                <rect key="frame" x="21" y="146" width="338" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="OeR-T1-Vdm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <state key="normal" title="Generar QR"/>
+                                <connections>
+                                    <action selector="actionGeneraQR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDb-j9-JQM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lvg-wm-YuC">
+                                <rect key="frame" x="16" y="195" width="343" height="452"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lvg-wm-YuC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0nE-T3-KBR"/>
+                            <constraint firstItem="e8a-1v-cxF" firstAttribute="top" secondItem="wZa-sD-Nly" secondAttribute="bottom" constant="8" id="6GW-QN-PLq"/>
+                            <constraint firstItem="wZa-sD-Nly" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7GJ-pa-Oau"/>
+                            <constraint firstItem="lvg-wm-YuC" firstAttribute="top" secondItem="e8a-1v-cxF" secondAttribute="bottom" constant="16" id="HTr-yF-wCf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lvg-wm-YuC" secondAttribute="bottom" constant="20" id="Hed-NR-Zjf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wZa-sD-Nly" secondAttribute="trailing" constant="16" id="JKJ-NR-lKr"/>
+                            <constraint firstItem="wZa-sD-Nly" firstAttribute="top" secondItem="aZm-bv-AYM" secondAttribute="bottom" constant="8" id="SaD-2s-fQ3"/>
+                            <constraint firstItem="e8a-1v-cxF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="XCJ-aJ-w70"/>
+                            <constraint firstItem="aZm-bv-AYM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gHO-k6-NWF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lvg-wm-YuC" secondAttribute="trailing" constant="16" id="ron-nY-cid"/>
+                            <constraint firstItem="aZm-bv-AYM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="wme-4K-dwm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e8a-1v-cxF" secondAttribute="trailing" constant="16" id="yu2-0u-7f4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="QR" id="WtK-nJ-u90">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="YFD-CV-hU2">
+                            <connections>
+                                <action selector="actionShareImage:" destination="BYZ-38-t0r" id="aGX-RY-hAx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgQR" destination="lvg-wm-YuC" id="k5R-7B-Bk0"/>
+                        <outlet property="txtTexto" destination="wZa-sD-Nly" id="EBn-NW-oXY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--QR Example-->
+        <scene sceneID="OFa-zw-zx9">
+            <objects>
+                <navigationController title="QR Example" id="nCg-kf-d2R" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="89g-Ya-K11">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7lA-WB-V4N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQa-QG-S5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-926" y="134"/>
         </scene>
     </scenes>
 </document>

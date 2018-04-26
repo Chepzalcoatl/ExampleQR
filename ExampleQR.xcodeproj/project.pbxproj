@@ -12,6 +12,8 @@
 		197470582092424200B4FBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 197470562092424200B4FBBB /* Main.storyboard */; };
 		1974705A2092424300B4FBBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197470592092424300B4FBBB /* Assets.xcassets */; };
 		1974705D2092424300B4FBBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1974705B2092424300B4FBBB /* LaunchScreen.storyboard */; };
+		1986FDDC20925192000346E5 /* ViewControllerQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1986FDDB20925192000346E5 /* ViewControllerQR.swift */; };
+		1986FDDE209252E1000346E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1986FDDD209252E1000346E5 /* Extensions.swift */; };
 		EC65D9F159199937772FEFA1 /* Pods_ExampleQR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D8C4656ABBA63BFB38DA2EA /* Pods_ExampleQR.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		197470592092424300B4FBBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1974705C2092424300B4FBBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1974705E2092424300B4FBBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1986FDDB20925192000346E5 /* ViewControllerQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerQR.swift; sourceTree = "<group>"; };
+		1986FDDD209252E1000346E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7D8C4656ABBA63BFB38DA2EA /* Pods_ExampleQR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleQR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F129E13212E94BCC9FF2774 /* Pods-ExampleQR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleQR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleQR/Pods-ExampleQR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +71,8 @@
 				197470592092424300B4FBBB /* Assets.xcassets */,
 				1974705B2092424300B4FBBB /* LaunchScreen.storyboard */,
 				1974705E2092424300B4FBBB /* Info.plist */,
+				1986FDDB20925192000346E5 /* ViewControllerQR.swift */,
+				1986FDDD209252E1000346E5 /* Extensions.swift */,
 			);
 			path = ExampleQR;
 			sourceTree = "<group>";
@@ -201,7 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				197470552092424200B4FBBB /* ViewController.swift in Sources */,
+				1986FDDC20925192000346E5 /* ViewControllerQR.swift in Sources */,
 				197470532092424200B4FBBB /* AppDelegate.swift in Sources */,
+				1986FDDE209252E1000346E5 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +357,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NC4LKA935;
 				INFOPLIST_FILE = ExampleQR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chepzalcoatl.ExampleQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -365,7 +376,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NC4LKA935;
 				INFOPLIST_FILE = ExampleQR/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chepzalcoatl.ExampleQR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
